@@ -31,7 +31,6 @@ def name(doc,method):
 				supplier = result_supdata	
 
 				doc.party_name = supplier
-
 	rows +=rows
 	
 
