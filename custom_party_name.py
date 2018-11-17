@@ -8,12 +8,12 @@ from frappe.model.document import Document
 def name(doc,method):
 	rows  = 0	
 	if doc.party_type == 'Customer':
-		datas = frappe.db.sql("""
+		customer_datas = frappe.db.sql("""
 				select customer_name  from `tabCustomer` 
 				where name = %s """,(doc.party))
 
 			
-		for i1 in datas:
+		for i1 in customer_datas:
 			for i2 in i1:
 				result_data = i2
 				result = result_data	
