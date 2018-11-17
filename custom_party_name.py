@@ -23,8 +23,7 @@ def name(doc,method):
 		supplier_datas = frappe.db.sql("""
 				select supplier_name  from `tabSupplier` 
 				where name = %s """,(doc.party))
-
-			
+	
 		for j1 in supplier_datas:
 			for j2 in j1:
 				result_supdata = j2
